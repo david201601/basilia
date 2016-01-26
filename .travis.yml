@@ -4,7 +4,8 @@ android:
     - build-tools-23.0.1
     - android-L
     - extra
-
+before_install:
+ - chmod +x gradlew
 # Emulator Management: Create, Start and Wait
 before_script:
   - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
