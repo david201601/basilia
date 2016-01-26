@@ -4,7 +4,6 @@ android:
     - build-tools-23.0.1
     - android-L
     - extra
-    - extra-google-m2repository
 before_install:
  - chmod +x gradlew
  - echo yes | android update sdk --all --filter build-tools-21.1.2 --no-ui --force > /dev/null
