@@ -4,9 +4,9 @@ android:
     - build-tools-23.0.1
     - android-23
     - extra
-env:
-  matrix:
-    - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+#env:
+#  matrix:
+#    - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
     
 before_install:
  - chmod +x gradlew
@@ -17,7 +17,10 @@ before_script:
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
-
+install:
+  - true
+script:
+  - TERM=dumb ./gradlew test assembleDebug
 #script:
 #  - android list target
 #  - ./gradlew connectedAndroidTest -PdisablePreDex
