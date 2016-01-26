@@ -4,6 +4,12 @@ android:
     - build-tools-23.0.1
     - android-23
     - extra
+env:
+  matrix:
+    - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-20 ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-21 ANDROID_ABI=armeabi-v7a
+    
 before_install:
  - chmod +x gradlew
  - echo yes | android update sdk --all --filter build-tools-21.1.2 --no-ui --force > /dev/null
