@@ -2,6 +2,8 @@ language: android
 jdk:
   - oraclejdk8
   - oraclejdk7
+cache: 
+  bundler
 android:
   components:
     - build-tools-23.0.1
