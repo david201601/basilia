@@ -3,6 +3,7 @@ jdk:
   - oraclejdk8
   - oraclejdk7
 android:
+  - { sdk: android-16,  targets: [android-7, android-16],   abi: armeabi}
   components:
     - build-tools-23.0.1
     - android-23
